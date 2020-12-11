@@ -22,25 +22,29 @@ def get_data(url_with_data, url_with_details): # Функция скрапит �
     html_with_data = get_html(url_with_data)
     html_with_details = get_html(url_with_details)
     if html_with_data and html_with_details:
-        data_soup = bs(html_with_data, 'html.parser')
-        details_soup = bs(html_with_details, 'html.parser')
-        data = data_soup('div', class_='info-block')
-        details = details_soup.find('div', {'id': 'divINFODocText1700'}).get_text()
-        judge = data[0].find('p').get_text()
-        assistant = data[0].find_all('p')[2].get_text()
-        secretary = data[0].find_all('p')[4].get_text()
-        number1 = data[0].find_all('span')[4].get_text().split()[0]
-        number2 = data[0].find_all('span')[7].get_text().split()[0]
-        email = data[0].find('a').get_text().split()[0]
-        reception_days = data[1].find_all('li')[1].get_text(), data[1].find_all('li')[2].get_text()
-        schedule = data[1].find_all('li')[3].get_text(), data[1].find_all('li')[4].get_text()
-        lunch_break = data[1].find_all('li')[5].get_text()
-        weekend = data[1].find_all('li')[6].get_text()
-        ufk = " ".join(details.split()[3:14])
-        inn = details.split()[16]
-        kpp = details.split()[19]
-        rc = details.split()[23]
-        bik = details.split()[36]
+        try:
+            data_soup = bs(html_with_data, 'html.parser')
+            details_soup = bs(html_with_details, 'html.parser')
+            data = data_soup('div', class_='info-block')
+            details = details_soup.find('div', {'id': 'divINFODocText1700'}).get_text()
+            judge = data[0].find('p').get_text()
+            assistant = data[0].find_all('p')[2].get_text()
+            secretary = data[0].find_all('p')[4].get_text()
+            number1 = data[0].find_all('span')[4].get_text().split()[0]
+            number2 = data[0].find_all('span')[7].get_text().split()[0]
+            email = data[0].find('a').get_text().split()[0]
+            reception_days = data[1].find_all('li')[1].get_text(), data[1].find_all('li')[2].get_text()
+            schedule = data[1].find_all('li')[3].get_text(), data[1].find_all('li')[4].get_text()
+            lunch_break = data[1].find_all('li')[5].get_text()
+            weekend = data[1].find_all('li')[6].get_text()
+            ufk = " ".join(details.split()[3:14])
+            inn = details.split()[16]
+            kpp = details.split()[19]
+            rc = details.split()[23]
+            bik = details.split()[36]
+        except(IndexError, KeyError, ValueError):
+            print('Возникла ошибка при получении данных')
+            return False
         main_data = {'Мировой судья': judge, 'Помощник': assistant, 'Секретарь': secretary, 'Номер телефона':
             [number1, number2], 'email': email, 'Рабочие дни' : reception_days, 'График': schedule, 'Обед': lunch_break,
             'Выходные': weekend, 'УФК': ufk, 'ИНН': inn, 'КПП': kpp, 'Расчетный счет': rc, 'БИК': bik}
