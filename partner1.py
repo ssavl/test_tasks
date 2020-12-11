@@ -42,11 +42,7 @@ def get_data(url_with_data, url_with_details): # Функция скрапит �
             kpp = details.split()[19]
             rc = details.split()[23]
             bik = details.split()[36]
-<<<<<<< HEAD
         except(IndexError, KeyError, ValueError):
-=======
-        except(IndexError, KeyError):
->>>>>>> 46ef6e653a8d8a3e25c6ec87dfe4567e2054fd52
             print('Возникла ошибка при получении данных')
             return False
         main_data = {'Мировой судья': judge, 'Помощник': assistant, 'Секретарь': secretary, 'Номер телефона':
