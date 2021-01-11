@@ -1,5 +1,5 @@
 
-h1 GET REQUESTS TO API
+# h1 GET REQUESTS TO API
 
 in order to get data on all users who answered the question, you need to send a GET request with the / Users parameters
 
@@ -17,10 +17,10 @@ in order to get data on all answer, you need to send a GET request with the / An
 
 or using the browser in the url strings specify http: // localhost: 8000 / api / v1 / Answer
 
-h1 POST REQUESTS TO API
+# h1 POST REQUESTS TO API
 
 to create a record in api, specify the fields for the record corresponding to the fields that you want to create in the database
 
-DELETE REQUESTS TO API
+# h1 DELETE REQUESTS TO API
 
 ...
