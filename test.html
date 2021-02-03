@@ -1,0 +1,414 @@
+ .header {
+     /* background-color: red; */
+     background-image: ;
+     background-attachment: fixed;
+     background-position: auto;
+     background-size: cover;
+     height: 600px;
+     position: relative;
+ }
+
+ .first-button {
+     background-color: salmon;
+
+ }
+
+.navbar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+}
+
+
+
+ .overlay {
+     position: absolute;
+     min-width: 100%;
+     min-height: 100%;
+     background: rgba(244, 244, 244, 0.20);
+ }
+
+
+.header2 {
+    background-image: url(./img/henry-co-UeueyMEWq-w-unsplash.jpg) repeat;
+    background-attachment: fixed;
+    background-position: auto;
+    background-size: cover;
+    height: 600px;
+    position: relative;
+
+}
+.centered {
+    float: right;
+}
+
+
+ .desc {
+
+    position:absolute;
+    top: 35%;
+    padding: 0%;
+ }
+
+ .code-design {
+    color: aliceblue;
+ }
+
+.about{
+    position: relative;
+    padding: 1em;
+    margin: 4em 0;
+}
+
+.about-me {
+    border-left: 4px solid salmon;
+    ;
+}
+
+.my-row-setting {
+    margin-top: 50px;
+}
+
+.portfolio img {
+    margin: 1em;
+    width: 100%;
+
+}
+
+.about img {
+    width: 50%;
+    position: static;;
+}
+
+.about h2 {
+    position: static;
+    width: 50%;
+}
+
+.about2 {
+    margin: 2em solid black;
+    padding: 2em solid black;
+}
+
+/* BLOG STYLE */
+
+.blog {
+    position: relative;
+    margin: 4em;
+    padding: 2em;
+}
+
+.blog .card .img {
+    width: 100%;
+}
+
+.blog .card {
+    box-shadow: 0 0 20px;
+    padding: 1em;
+}
+
+.blog .card:hover {
+    background: gray;
+    cursor: pointer;
+}
+
+/* FORM */
+
+.contact-form {
+    position: relative;
+    padding: 2em;
+    margin: 4em;
+
+}
+
+.contact-form h1 {
+    padding: 2em 1px;
+}
+
+.contact-form .right .btn-primary{
+
+}
+
+.contact-form .right {
+    max-width: 600px;
+}
+
+.parent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.child {
+    min-height: 150px;
+    width: 150px;
+    background-color: powderblue;
+    margin: 10px;
+    padding: 10px;
+}
+
+.child:nth-child(3) {
+
+}
+
+
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <title>Стартовая страница</title>
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+
+    <!-----------------------------------------------------NAVIGATOR-BAR------------------------------------------------------->
+
+    <nav class="navbar fixed-top navbar-dark bg-dark navbar-expand-lg">
+        <div class="container navbar-nav ml-auto">
+            <a href="#" class="navbar-brand"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#LandNav"><span class="navbar-toggler-icon"></span></button>
+
+            <div class="collapse navbar-collapse flex-row-reverse" id="LandNav">
+
+                <ul class="nav navbar-nav navbar-right ml-auto">
+                    <li class="nav-item" style="padding-right: 3em;"><a href="#about" class="nav-link text-center">УСЛУГИ </a></li>
+                    <li class="nav-item" style="padding-right: 3em;"><a href="#form" class="nav-link text-center">ОФИС ПРОДАЖ</a></li>
+                    <li class="nav-item" style="padding-right: 3em;"><a href="#service" class="nav-link text-center">КОНТАКТЫ</a></li>
+                    <li class="nav-item" style="padding-right: 3em;"><a href="#work" class="nav-link text-center">О НАС</a></li>
+                    <li class="nav-item"style="padding-right: 2em;"><a class="nav-link text-center">+7 (925) 506-93-40</a></li>
+                    <li class="nav-item"><a href="" class="nav-link text-center"><button class="btn  first-button" >ЗАКАЗАТЬ ЗВОНОК</button></a></li>
+
+
+                </ul>
+            </div>
+        </div>
+        <!-- <a class="nav-link code-design"><h3></h3></a> Пробую самостоятельно верстать -->
+
+    </nav>
+
+    <!---------------------------------------------------------HEADER---------------------------------------------------------->
+
+    <header class="header">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="desc">
+                <h1 class="code-design">КОМФОРТ ВЕКА</h1>
+                <h4 class="code-design">Мы делаем вашу жизнь проще! </h4>
+                <p><button class="btn btn-lg first-button">Заказать замер окон</button></p>
+            </div>
+        </div>
+
+    </header>
+
+
+    <!---------------------------------------------------------ABOUT---------------------------------------------------------->
+
+    <div class="about" id="about" style='margin-top: 150px;' id="about">
+        <div class="container">
+            <h1 class="text-center" style="margin-bottom: 60px;"> О нас</h1>
+            <div class="row mt-row-setting">
+                <div class="col">
+                    <img src="{{ url_for('static', filename='img/joseph-gonzalez-EBm2Rlhxk_I-unsplash.jpg') }}" alt="no img" class="img-fluid">
+                    <!-- <span class="text-justify">Оконная Компания</span> -->
+                </div>
+                <div class="col about-me">
+                    <h5>«Komfort Veka»</h5>
+                    <p>
+                         — крупнейший производитель пластиковых окон в России. Современное автоматизированное производство
+                        по запатентованным технологиям, контроль качества на каждом этапе, адаптированные под российские климатические условия
+                        системы установки делают нас лидерами по количеству продаж вот уже более 25 лет. Мы рады предложить Вам:
+                    </p>
+                </div>
+            </div>
+            <div class="row my-row-setting" >
+                <div class="col">
+                    <img src="{{ url_for('static', filename='img/joseph-gonzalez-EBm2Rlhxk_I-unsplash.jpg')}}" alt="no img" class="img-fluid">
+                </div>
+                <div class="col about-me">
+                <p>
+                    Мы предлагаем свои заказчикам уникальную продукцию, которая и по общим характеристикам, и по эксплуатационным свойствам всегда лучше,
+                    чем окна ПВХ других производителей. Компания "Komfort Veka»" занимается производством пластиковых окон с 1992 года: мы стояли у истоков
+                    в те времена и сейчас продолжаем задавать в Москве и в различных городах России тенденции, выпуская недорогие пластиковые окна нового поколения.
+                </p>
+            </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--------------------------------------------------services of our company--------------------------------------------->
+
+    <div class="about about2" id="service">
+        <div class="container">
+            <h1 class="text-center" style="margin-bottom: 60px; margin-top: 100px;">Наши услуги</h1>
+            <div class="row">
+                <div class="col col-md-4 col-sm-12 ">
+                    <img src="{{url_for('static', filename= 'img/windows.png') }}" alt="no img" class="img-fluid">
+                </div>
+                <div class="col col-md-4 col-sm-12">
+                    <img src="{{url_for('static', filename= 'img/construction-worker.png') }} " alt="no img" class="img-fluid">
+                </div>
+                <div class="col col-md-4 col-sm-12">
+                    <img src="{{url_for('static', filename='img/money — копия.png' ) }}" alt="no img" class="img-fluid">
+                </div>
+            </div>
+            <div class="row my-row-setting">
+                <div class="col"><h2 class="text-center">Качество</h2></div>
+                <div class="col"><h2 class="text-center">Ответственность</h2></div>
+                <div class="col"><h2 class="text-center">Честные цены</h2></div>
+            </div>
+        </div>
+    </div>
+
+    <!----------------------------------------------------------header2------------------------------------------------------->
+
+    <div class="header2">
+        <div class="conteiner">
+            <div class="overlay">
+                <div class="desc">
+                    <h1 class="code-design" style="margin-left: 200px;">Генеральный партнер строительных компаний №1</h1>
+                    <p class="text-center"><botton class="btn btn-lg first-button">Заказать консультацию</botton></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+  <!----------------------------------------------------------OUR WORK------------------------------------------------------->
+
+
+    <div class="portfolio" style="margin-bottom: 200px; margin-top: 200px;" id="work">
+        <h1 class="text-center" style="margin-bottom: 150px;"> Наши работы</h1>
+        <div class="container">
+            <div class="row my-row-setting">
+                <div class="col-lg col-md col-sm">
+                    <img src="{{url_for('static', filename= 'img/spencer-davis-SVfXlChg9HI-unsplash.jpg')}}" alt="" style="width: 300%;" class="img-fluid">
+                </div>
+                <!-- <div class="col-sm">
+                    <img src="
+                    " alt="" class="img-fluid">
+                </div> -->
+                <div class="col-sm">
+                    <img src="{{url_for('static', filename= 'img/mkjr_-2zUjvV0M9dQ-unsplash.jpg')}}" alt="" class="img-fluid">
+                </div>
+                <div class="col-sm">
+                    <img src="{{url_for('static', filename= 'img/caterina-beleffi-7HfciUUHrm4-unsplash.jpg')}}"  alt="" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+  <!----------------------------------------------------------отзывы------------------------------------------------------->
+
+
+<div class="blog" id="blog">
+    <h1 class="text-center">ОТЗЫВЫ КЛИЕНТОВ</h1>
+    <div class="row">
+        <div class="col-lg-3 col-md-3 card">
+            <div class="card-img">
+                <img src="https://via.placeholder.com/300" alt="no img" class="img-fluid">
+                <div class="card-body">
+                    <h4 class="card-title">card-title</h4>
+                    <p class="card-text">cart text text text text text </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-3 card">
+            <div class="card-img">
+                <img src="https://via.placeholder.com/300" alt="no img" class="img-fluid">
+                <div class="card-body">
+                    <h4 class="card-title">card-title</h4>
+                    <p class="card-text">cart text text text text text </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-3 card">
+            <div class="card-img">
+                <img src="https://via.placeholder.com/300" alt="no img" class="img-fluid">
+                <div class="card-body">
+                    <h4 class="card-title">card-title</h4>
+                    <p class="card-text">cart text textg </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-3 card>
+            <div class="card-img">
+                <img src="https://via.placeholder.com/300" alt="no img" class="img-fluid">
+                <div class="card-body">
+                    <h4 class="card-title">card-title</h4>
+                    <p class="card-text">cart text text text text text 11</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+  <!----------------------------------------------------------Oбратная связь------------------------------------------------------->
+
+  <div class="contact-form" id="form">
+    <div> <h1 class="text-center" style="margin-bottom: 100px;">Сделать заказ</h1></div>
+    <div class="container">
+        <form action="" >
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <h1>Закажите Сейчас!</h1>
+                </div>
+                <div class="col-lg-8 col-md-8 col-sm-12 right">
+                    <!--name, email, text_message  -->
+                    <div class="form-group">
+                        <input type="text" placeholder="Ваше имя" class="form-control from-control-lg">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Email" class="from-control-lg form-control">
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control form-control-lg" placeholder="Текст сообщения"></textarea>
+                    </div>
+                    <input type="submit" class="btn btn-primary btn-block" value="Отправить">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!---------------------------------------------------------FLEX BOX---------------------------------------------------------->
+
+<div class="parent">
+
+    <div class="child">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab harum quae quo officiis quasi officia, deleniti nam accusantium impedit repellendus rem, odio iure culpa assumenda rerum quisquam sed. Quo, numquam!</div>
+
+    <div class="child">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab harum quae quo officiis quasi officia, deleniti nam accusantium impedit repellendus rem, odio iure culpa assumenda rerum quisquam sed. Quo, numquam!</div>
+
+    <div class="child">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab harum quae quo officiis quasi officia, deleniti nam accusantium impedit repellendus rem, odio iure culpa assumenda rerum quisquam sed. Quo, numquam!</div>
+
+    <div class="child">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab harum quae quo officiis quasi officia, deleniti nam accusantium impedit repellendus rem, odio iure culpa assumenda rerum quisquam sed. Quo, numquam!</div>
+
+</div>
+
+
+  <!----------------------------------------------------------JS------------------------------------------------------->
+  <script src="{{url_for('static', filename= 'main.js') }}" type="text/javascript" >
+  </script>
+
+
+
+  <!---------------- Option 1: jQuery and Bootstrap Bundle (includes Popper) --------------->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+</body>
+</html>
+savelii@bett:~/pr

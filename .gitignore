@@ -1,11 +1,11 @@
 data.json
-
+.idea
 *.ipynb_checkpoints
 *.DS_Store
 *__pycache__
 *._*
 *.log
-
+.env
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
