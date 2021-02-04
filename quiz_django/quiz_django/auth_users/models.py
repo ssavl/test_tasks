@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
-
+from phone_field import PhoneField
 
 # Create your models here.
 
@@ -11,4 +11,5 @@ class User(AbstractUser):
         ('teacher', 'Teach'),
     ]
     status = models.CharField(choices=WHOISIT, default='student', max_length=255)
-    avatar = models.ImageField(default=None)
+    img = models.ImageField(default=None)
+    phone = PhoneField(blank=True, help_text='Contact phone number')

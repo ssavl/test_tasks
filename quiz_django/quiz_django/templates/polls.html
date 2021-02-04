@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+    <div class="container">
+
+
+      <h1>Тесты:</h1>
+        <br>
+        <br>
+
+
+        {% for test in tests %}
+         <a href="/polls/{{test.pk}}">{{ test }}</a>
+        <br> <br>
+        {% endfor %}
+
+
+        <br>
+
+
+
+
+    </div>
+
+
+{% endblock %}
