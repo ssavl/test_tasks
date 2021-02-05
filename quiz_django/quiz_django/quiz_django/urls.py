@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from auth_users.views import start, MyLoginView, MyLogoutView
+from auth_users.views import start, MyLoginView, MyLogoutView, RegisterView
 from polls.views import polls_view, pass_poll
 
 urlpatterns = [
@@ -25,4 +25,5 @@ urlpatterns = [
     path('', start),
     path('polls/', polls_view),
     path('polls/<int:pk>', pass_poll),
+    path('signup/', RegisterView.as_view()),
 ]

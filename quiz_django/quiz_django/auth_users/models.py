@@ -11,5 +11,4 @@ class User(AbstractUser):
         ('teacher', 'Teach'),
     ]
     status = models.CharField(choices=WHOISIT, default='student', max_length=255)
-    img = models.ImageField(default=None)
     phone = PhoneField(blank=True, help_text='Contact phone number')

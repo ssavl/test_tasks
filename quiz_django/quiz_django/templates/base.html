@@ -31,6 +31,9 @@
             <li class="nav-item">
               <a class="nav-link" href="/polls">Тесты</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/signup">Создать пользователя</a>
+            </li>
           </ul>
           <form class="d-flex">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -48,22 +51,12 @@
         {% else %}
             <h3>Вы неавторизированы на сайте!</h3>
         {% endif %}
+       <br>
+       <br>
      </div>
 
-
-    <br>
-    <br>
-    <br>
-    <br>
-
-
-
-
-
-     <br>
-    <br>
-    <br>
-    <br>
+      <br>
+      <br>
 
     {% block content %}
     {% endblock %}
