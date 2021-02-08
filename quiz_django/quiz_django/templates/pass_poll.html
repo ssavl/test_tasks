@@ -24,9 +24,16 @@
                 </div>
             {% endfor  %}
             {% endfor  %} <br>
-            <input type="hidden" value="{{ user.username }}" name="user">
             <input type="submit" value="Submit" name="submit">
         </form>
+
+        {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
 
 
         <br>
